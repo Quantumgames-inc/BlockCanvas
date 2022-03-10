@@ -8,13 +8,16 @@ not for a while. we need to work hard to make this as good as it can be. we will
 ## development update-start of development! ##
 we have started development! 
 --
-version 0.0.1DEV
-
-***what we are working on***
-- getting the base code developed
-- getting it implemented in the playcanvas code
-- get node functions working with playcanvas functions
-- more to come later!
+| version updates | what's new | date published |
+| --- | --- | --- |
+| development 0.0.1 | started development! | N/A
 ## how can i help? ##
 money would be nice, but i am doing this for fun. what you could do, is play our game, Left 2 Die! we made it on playcanvas.com.
+## roadmap ##
+| things to do | Developed? | Added to Playcanvas? | developing? |
+| --- | --- | ---| --- |
+| editor | no | no | yes |
+| nodes | no | no | no |
+| configure nodes to work with playcanvas | no| no| no|
+
 ### Developed by DevGuy-owner of Quantumgames Studios inc.
