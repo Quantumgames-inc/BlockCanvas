@@ -19,5 +19,12 @@ money would be nice, but i am doing this for fun. what you could do, is play our
 | editor | no | no | yes |
 | nodes | no | no | no |
 | configure nodes to work with playcanvas | no| no| no|
-
+## what we need to do ##
+- create a server to host the editor
+- create a REST API to communicate the editor to the engine
+- make a library for playcanvas so when you want to create a script, there will be an option to use the node editor
+- configure all the nodes
+- make the communication script sense what nodes were used and what nodes connect to other nodes, then print that information as playcanvas javascript code in the script on playcanvas
+  
 ### Developed by DevGuy-owner of Quantumgames Studios inc.
+base code from the playcanvas pcui node graph system.
