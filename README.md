@@ -1,4 +1,4 @@
-# flowcanvas-a-playcanvas-visual-scripting-editor
+# flowcanvas-a playcanvas visual scripting editor
 
 ## what is flowcanvas? ##
 flowcanvas is a visual scripting editor for playcanvas.com. it is made with javascript/node.js.
@@ -22,10 +22,10 @@ money would be nice, but i am doing this for fun. what you could do, is play our
 | configure nodes to work with playcanvas | no| no| no|
 ## what we need to do ##
 - create a server to host the editor
-- create a REST API to communicate the editor to the engine
-- make a library for playcanvas so when you want to create a script, there will be an option to use the node editor
+- create a function to get what nodes and the data of the nodes being used, then output it to a json file or other data file
+- make a converter script that reads the data file, then outputs it as javascript playcanvas code that you can then press a button to download
 - configure all the nodes
-- make the communication script sense what nodes were used and what nodes connect to other nodes, then print that information as playcanvas javascript code in the script on playcanvas
+
   
 ### Developed by DevGuy-owner of Quantumgames Studios inc.
 base code from the playcanvas pcui node graph system.

@@ -487,7 +487,6 @@
         getNodeType: function(type) {
             return this.registered_node_types[type];
         },
-        module.exports = { getNodeType };
 
         /**
          * Returns a list of node types matching one category
@@ -856,7 +855,7 @@
 
         this.sendActionToCanvas("clear");
     };
-    module.exports = { LGraph };
+
     /**
      * Attach Canvas to this graph
      * @method attachCanvas

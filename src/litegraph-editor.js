@@ -39,23 +39,23 @@ function Editor(container_id, options) {
         this.onPlayButton.bind(this),
         ".tools-right"
     );
-    this.addToolsButton(
-        "playstepnode_button",
-        "Step",
-        "imgs/icon-playstep.png",
-        this.onPlayStepButton.bind(this),
-        ".tools-right"
-    );
+    //this.addToolsButton(
+   //     "playstepnode_button",
+   //     "Step",
+   //     "imgs/icon-playstep.png",
+   //     this.onPlayStepButton.bind(this),
+  //      ".tools-right"
+  //  );
 
-    if (!options.skip_livemode) {
-        this.addToolsButton(
-            "livemode_button",
-            "Live",
-            "imgs/icon-record.png",
-            this.onLiveButton.bind(this),
-            ".tools-right"
-        );
-    }
+   //if (!options.skip_livemode) {
+   //     this.addToolsButton(
+    //        "livemode_button",
+   //         "Live",
+   //         "imgs/icon-record.png",
+   //         this.onLiveButton.bind(this),
+    //        ".tools-right"
+  //      );
+   // }
     if (!options.skip_maximize) {
         this.addToolsButton(
             "maximize_button",
@@ -126,12 +126,12 @@ Editor.prototype.createButton = function(name, icon_url, callback) {
     return button;
 };
 
-Editor.prototype.onLoadButton = function() {
-    var panel = this.graphcanvas.createPanel("Load session",{closable:true});
+//Editor.prototype.onLoadButton = function() {
+//    var panel = this.graphcanvas.createPanel("Load session",{closable:true});
 	//TO DO
 
-    this.root.appendChild(panel);
-};
+   // this.root.appendChild(panel);
+//};
 
 Editor.prototype.onSaveButton = function() {};
 
