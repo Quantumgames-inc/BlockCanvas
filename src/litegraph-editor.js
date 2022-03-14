@@ -1,4 +1,3 @@
-
 //Creates an interface to access extra features from a graph (like play, stop, live, etc)
 function Editor(container_id, options) {
     options = options || {};
@@ -134,9 +133,7 @@ Editor.prototype.onLoadButton = function() {
     this.root.appendChild(panel);
 };
 
-Editor.prototype.onSaveButton = function() {
-  
-};
+Editor.prototype.onSaveButton = function() {};
 
 Editor.prototype.onPlayButton = function() {
     var graph = this.graph;
@@ -183,7 +180,6 @@ Editor.prototype.onDropItem = function(e)
 			reader.onload = function(event) {
 				var data = JSON.parse( event.target.result );
 				that.graph.configure(data);
-        fs.writeFileSync('getnodes.json', data);
 			};
 			reader.readAsText(file);
 		}
