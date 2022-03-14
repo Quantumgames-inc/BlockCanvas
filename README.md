@@ -1,5 +1,5 @@
 # flowcanvas-a-playcanvas-visual-scripting-editor
-# development is paused on this. it is not turning out how i want it to, so i am working on a different project. i might work on this project eventually, but not right now. #
+
 ## what is flowcanvas? ##
 flowcanvas is a visual scripting editor for playcanvas.com. it is made with javascript/node.js.
 ## how will i be able to use it? ##
