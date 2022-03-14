@@ -1,5 +1,5 @@
 # flowcanvas-a playcanvas visual scripting editor
-
+[![CodeQL](https://github.com/Quantumgames-inc/flowcanvas-a-playcanvas-visual-scripting-editor/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Quantumgames-inc/flowcanvas-a-playcanvas-visual-scripting-editor/actions/workflows/codeql-analysis.yml)
 ## what is flowcanvas? ##
 flowcanvas is a visual scripting editor for playcanvas.com. it is made with javascript/node.js.
 ## how will i be able to use it? ##
