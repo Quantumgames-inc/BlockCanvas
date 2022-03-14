@@ -1,4 +1,4 @@
-const fs = require('fs');
+
 //Creates an interface to access extra features from a graph (like play, stop, live, etc)
 function Editor(container_id, options) {
     options = options || {};
@@ -134,7 +134,9 @@ Editor.prototype.onLoadButton = function() {
     this.root.appendChild(panel);
 };
 
-Editor.prototype.onSaveButton = function() {};
+Editor.prototype.onSaveButton = function() {
+  
+};
 
 Editor.prototype.onPlayButton = function() {
     var graph = this.graph;
