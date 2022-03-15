@@ -9,7 +9,7 @@ window.addEventListener("resize", function() { editor.graphcanvas.resize(); } );
 //window.addEventListener("keydown", editor.graphcanvas.processKey.bind(editor.graphcanvas) );
 window.onbeforeunload = function(){
 	var data = JSON.stringify( graph.serialize() );
-	localStorage.setItem("litegraphg demo backup", data );
+	localStorage.setItem("graph saves", data );
 }
 
 //enable scripting
@@ -23,7 +23,7 @@ var elem = document.createElement("span");
 elem.id = "LGEditorTopBarSelector";
 elem.className = "selector";
 elem.innerHTML = "";
-elem.innerHTML += "Demo <select><option>Empty</option></select> <button class='btn' id='save'>Save</button><button class='btn' id='load'>Load</button><button class='btn' id='download'>Download</button> | <button class='btn' id='webgl'>WebGL</button> <button class='btn' id='multiview'>Multiview</button>";
+elem.innerHTML += "Flowcanvas  <button class='btn' id='save'>Save</button><button class='btn' id='load'>Load</button><button class='btn' id='download'>Download</button> | <button class='btn' id='webgl'>WebGL</button> <button class='btn' id='multiview'>Multiview</button>";
 editor.tools.appendChild(elem);
 var select = elem.querySelector("select");
 select.addEventListener("change", function(e){
@@ -39,12 +39,16 @@ select.addEventListener("change", function(e){
 });
 
 elem.querySelector("#save").addEventListener("click",function(){
+const fs = require('fs');
 	console.log("saved");
-	localStorage.setItem( "graphdemo_save", JSON.stringify( graph.serialize() ) );
+	localStorage.setItem( "graph_save", JSON.stringify( graph.serialize() ) );
+  var data = localStorage.getItem( "graph_save" );
+  	var ndata = JSON.stringify( graph.serialize() );
+  fs.writeFileSync('nodedata.json', ndata);
 });
 
 elem.querySelector("#load").addEventListener("click",function(){
-	var data = localStorage.getItem( "graphdemo_save" );
+	var data = localStorage.getItem( "graph_save" );
 	if(data)
 		graph.configure( JSON.parse( data ) );
 	console.log("loaded");
