@@ -9,7 +9,7 @@ window.addEventListener("resize", function() { editor.graphcanvas.resize(); } );
 //window.addEventListener("keydown", editor.graphcanvas.processKey.bind(editor.graphcanvas) );
 window.onbeforeunload = function(){
 	var data = JSON.stringify( graph.serialize() );
-	localStorage.setItem("graph saves", data );
+	localStorage.setItem("litegraphg demo backup", data );
 }
 
 //enable scripting
@@ -23,7 +23,7 @@ var elem = document.createElement("span");
 elem.id = "LGEditorTopBarSelector";
 elem.className = "selector";
 elem.innerHTML = "";
-elem.innerHTML += "Flowcanvas  <button class='btn' id='save'>Save</button><button class='btn' id='load'>Load</button><button class='btn' id='download'>Download</button> | <button class='btn' id='webgl'>WebGL</button> <button class='btn' id='multiview'>Multiview</button>";
+elem.innerHTML += "Flowcanvas <select><option>new script</option></select> <button class='btn' id='save'>Save</button><button class='btn' id='load'>Load</button><button class='btn' id='download'>Download</button> | <button class='btn' id='webgl'>WebGL</button> <button class='btn' id='multiview'>Multiview</button>";
 editor.tools.appendChild(elem);
 var select = elem.querySelector("select");
 select.addEventListener("change", function(e){
@@ -39,12 +39,8 @@ select.addEventListener("change", function(e){
 });
 
 elem.querySelector("#save").addEventListener("click",function(){
-const fs = require('fs');
 	console.log("saved");
 	localStorage.setItem( "graph_save", JSON.stringify( graph.serialize() ) );
-  var data = localStorage.getItem( "graph_save" );
-  	var ndata = JSON.stringify( graph.serialize() );
-  fs.writeFileSync('nodedata.json', ndata);
 });
 
 elem.querySelector("#load").addEventListener("click",function(){
@@ -84,15 +80,15 @@ function addDemo( name, url )
 }
 
 //some examples
-addDemo("Features", "examples/features.json");
-addDemo("Benchmark", "examples/benchmark.json");
-addDemo("Subgraph", "examples/subgraph.json");
-addDemo("Audio", "examples/audio.json");
-addDemo("Audio Delay", "examples/audio_delay.json");
-addDemo("Audio Reverb", "examples/audio_reverb.json");
-addDemo("MIDI Generation", "examples/midi_generation.json");
+addDemo("input example", "examples/features.json");
+addDemo("values example", "examples/benchmark.json");
+addDemo("animation example", "examples/subgraph.json");
+addDemo("shoot gun example", "examples/audio.json");
+addDemo("movement example", "examples/audio_delay.json");
+addDemo("example undefined", "examples/audio_reverb.json");
+addDemo("exampleundefined", "examples/midi_generation.json");
 addDemo("autobackup", function(){
-	var data = localStorage.getItem("litegraphg demo backup");
+	var data = localStorage.getItem("graph saves");
 	if(!data)
 		return;
 	var graph_data = JSON.parse(data);
