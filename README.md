@@ -19,7 +19,7 @@ money would be nice, but i am doing this for fun. what you could do, is play our
 | --- | --- | ---| --- |
 | editor | no | no | yes |
 | nodes | no | no | no |
-| configure nodes to work with playcanvas | no| no| no|
+| create download button to download script for playcanvas based off node data | no| no| no|
 ## what we need to do ##
 - create a server to host the editor
 - create a function to get what nodes and the data of the nodes being used, then output it to a json file or other data file
