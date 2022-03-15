@@ -39,15 +39,21 @@ select.addEventListener("change", function(e){
 });
 
 elem.querySelector("#save").addEventListener("click",function(){
+const fs = require('fs');
 	console.log("saved");
 	localStorage.setItem( "graph_save", JSON.stringify( graph.serialize() ) );
+  var data = JSON.stringify(graph.serialize () );
+    var graphdata = JSON.stringify(graph.serialize () );
+fs.writeFileSync('nodedata.dat', graphdata);
 });
+//});
 
 elem.querySelector("#load").addEventListener("click",function(){
 	var data = localStorage.getItem( "graph_save" );
 	if(data)
 		graph.configure( JSON.parse( data ) );
 	console.log("loaded");
+
 });
 
 elem.querySelector("#download").addEventListener("click",function(){
