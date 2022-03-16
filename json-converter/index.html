@@ -11,7 +11,7 @@
 
 <input type="file" id="files" name="file" /> Read bytes: 
 <span class="readBytesButtons">
-  <button>entire file</button>
+  <button>send file to server</button>
 </span>
 <div id="byte_range"></div>
 <div id="byte_content"></div>
@@ -51,19 +51,19 @@
       var startByte = evt.target.getAttribute('data-startbyte');
       var endByte = evt.target.getAttribute('data-endbyte');
       readBlob(startByte, endByte);
-      var ndat = readBlob(startByte, endByte)
+      
     }
   }, false);
 
 // Requiring fs module in which
 // writeFile function is defined.
-const fs = require('fs')
-  
+  const fs = require('fs')
+  var ndat = readBlob(startByte, endByte)
 // Data which will write in a file.
-let data = blob
+let data = ndat
   
 // Write data in 'Output.txt' .
-fs.writeFile('json-converter/graphsave.txt', data, (err) => {
+fs.writeFile('./json-converter/graphsave.txt', data, (err) => {
       
     // In case of a error throw err.
     if (err) throw err;
