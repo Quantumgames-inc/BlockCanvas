@@ -43,9 +43,6 @@ elem.querySelector("#save").addEventListener("click",function(){
   var fs = require('fs');
 	console.log("saved");
 	localStorage.setItem( "graph_save", JSON.stringify( graph.serialize() ) );
-  var data = JSON.stringify(graph.serialize () );
-    //var graphdata = JSON.stringify(graph.serialize () );
-fs.writeFileSync('nodedata.txt', data);
 });
 //});
 
