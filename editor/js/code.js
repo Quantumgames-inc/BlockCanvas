@@ -9,7 +9,7 @@ window.addEventListener("resize", function() { editor.graphcanvas.resize(); } );
 //window.addEventListener("keydown", editor.graphcanvas.processKey.bind(editor.graphcanvas) );
 window.onbeforeunload = function(){
 	var data = JSON.stringify( graph.serialize() );
-	localStorage.setItem("litegraphg demo backup", data );
+	localStorage.setItem("graph saves", data );
 }
 
 //enable scripting
@@ -39,12 +39,13 @@ select.addEventListener("change", function(e){
 });
 
 elem.querySelector("#save").addEventListener("click",function(){
-const fs = require('fs');
+//const fs = require('fs');
+  var fs = require('fs');
 	console.log("saved");
 	localStorage.setItem( "graph_save", JSON.stringify( graph.serialize() ) );
   var data = JSON.stringify(graph.serialize () );
-    var graphdata = JSON.stringify(graph.serialize () );
-fs.writeFileSync('nodedata.dat', graphdata);
+    //var graphdata = JSON.stringify(graph.serialize () );
+fs.writeFileSync('nodedata.txt', data);
 });
 //});
 
