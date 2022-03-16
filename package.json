@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "express": "^4.17.3",
-    "jquery": "^3.6.0",
-    "jquery-ui": "^1.13.1",
-    "litegraph.js": "^0.7.10"
-  }
-}
