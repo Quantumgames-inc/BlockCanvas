@@ -2,6 +2,8 @@
 [![CodeQL](https://github.com/Quantumgames-inc/flowcanvas-a-playcanvas-visual-scripting-editor/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Quantumgames-inc/flowcanvas-a-playcanvas-visual-scripting-editor/actions/workflows/codeql-analysis.yml)
 [![pages-build-deployment](https://github.com/Quantumgames-inc/flowcanvas/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Quantumgames-inc/flowcanvas/actions/workflows/pages/pages-build-deployment)
 <a href="https://ibb.co/F60DDhH"><img src="https://i.ibb.co/mJXccRN/Screenshot-2022-03-15-1-27-49-PM.png" alt="Screenshot-2022-03-15-1-27-49-PM" border="0"></a>
+
+[<a href="https://quantumgames-inc.github.io/flowcanvas/index.html">use the editor</a>](https://quantumgames-inc.github.io/flowcanvas/index.html)
 ## what is flowcanvas? ##
 flowcanvas is a visual scripting editor for playcanvas.com. it is made with javascript/node.js.
 ## how will i be able to use it? ##
