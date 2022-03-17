@@ -1,57 +1,39 @@
-<html>
-    <head>Firebase Storage Download File</head>
-    <body>
-        <div>
-            <h2 class="">Download a file</h2>
-            <div>
-                <p>Enter file name in the below text box to generate download link</p>
-                <h6>File Name</h6>
-                <input type="text" id="file" name="file"/>
-                <input type="button" value="Generate" onclick="generateDownloadLink()"/>
-                <h6>File URL:</h6>
-                <span id="linkbox"></span>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flowcanvas</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.6.8/firebase-app.js"></script>
+<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</head>
+<body class="is-boxed has-animations">
+    <div class="body-wrap">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+							<a href="#">
+								<img class="header-logo-image" src="dist/images/logo.svg" alt="Logo">
+                            </a>
+                        </h1>
+                    </div>
+                </div>
             </div>
-        </div>
-                          
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
-       
-        <!-- Add Firebase products that you want to use -->
-        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-storage.js"></script>
-        
-        <script src="init-firebase.js"></script>
- 
-        <script>
-            var auth = firebase.auth();
-            var storageRef = firebase.storage().ref();
-            
-            function generateDownloadLink() {
-                var fileName = document.getElementById("file").value;
-                storageRef.child("images/" + fileName).getDownloadURL().then(function (url) {
-                    document.getElementById('linkbox').innerHTML = '<a href="' + url + '">' + url + '</a>';
-                }).catch(function (error) {
-                    console.log(error);
-                    document.getElementById('linkbox').innerHTML = error.code;
-                });
-            }
-            
-            window.onload = function () {
-                auth.onAuthStateChanged(function (user) {
-                    if (user) {
-                        console.log('Anonymous user signed-in.', user);
-                    } else {
-                        console.log('There was no anonymous session. Creating a new anonymous user.');
-                        // Sign the user in anonymously since accessing Storage requires the user to be authorized.
-                        auth.signInAnonymously().catch(function (error) {
-                            if (error.code === 'auth/operation-not-allowed') {
-                                window.alert('Anonymous Sign-in failed. Please make sure that you have enabled anonymous ' +
-                                        'sign-in on your Firebase project.');
-                            }
-                        });
-                    }
-                });
-            }
-        </script>
-    </body>
-</html>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-inner">
+						<div class="hero-copy">
+	                        <h1 class="hero-title mt-0">Flowcanvas-quikscripts</h1>
+	                        <p class="hero-paragraph">download ready to use scripts for playcanvas</p>
+	                        <div class="hero-cta">
+                          <a class ="button button-primary" href="/quikscripts/fps.js" download> first person movement script </a>   </div>
+</div>
