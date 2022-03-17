@@ -1,0 +1,57 @@
+<html>
+    <head>Firebase Storage Download File</head>
+    <body>
+        <div>
+            <h2 class="">Download a file</h2>
+            <div>
+                <p>Enter file name in the below text box to generate download link</p>
+                <h6>File Name</h6>
+                <input type="text" id="file" name="file"/>
+                <input type="button" value="Generate" onclick="generateDownloadLink()"/>
+                <h6>File URL:</h6>
+                <span id="linkbox"></span>
+            </div>
+        </div>
+                          
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+       
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-storage.js"></script>
+        
+        <script src="init-firebase.js"></script>
+ 
+        <script>
+            var auth = firebase.auth();
+            var storageRef = firebase.storage().ref();
+            
+            function generateDownloadLink() {
+                var fileName = document.getElementById("file").value;
+                storageRef.child("images/" + fileName).getDownloadURL().then(function (url) {
+                    document.getElementById('linkbox').innerHTML = '<a href="' + url + '">' + url + '</a>';
+                }).catch(function (error) {
+                    console.log(error);
+                    document.getElementById('linkbox').innerHTML = error.code;
+                });
+            }
+            
+            window.onload = function () {
+                auth.onAuthStateChanged(function (user) {
+                    if (user) {
+                        console.log('Anonymous user signed-in.', user);
+                    } else {
+                        console.log('There was no anonymous session. Creating a new anonymous user.');
+                        // Sign the user in anonymously since accessing Storage requires the user to be authorized.
+                        auth.signInAnonymously().catch(function (error) {
+                            if (error.code === 'auth/operation-not-allowed') {
+                                window.alert('Anonymous Sign-in failed. Please make sure that you have enabled anonymous ' +
+                                        'sign-in on your Firebase project.');
+                            }
+                        });
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>
