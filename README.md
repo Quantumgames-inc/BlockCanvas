@@ -15,15 +15,19 @@ we have started development!
 --
 | version updates | what's new | date published |
 | --- | --- | --- |
-| development 0.0.1 | started development! | N/A
+| development 0.0.1 | started development! | N/A |
+| alpha 1.0.0 | editor alpha release | march 17th |
+| alpha 1.2.0 | converter dev release | march 18th |
+
 ## how can i help? ##
 money would be nice, but i am doing this for fun. what you could do, is play our game, Left 2 Die! we made it on playcanvas.com.
 ## roadmap ##
 | things to do | Developed? | Added to Playcanvas? | developing? |
 | --- | --- | ---| --- |
 | editor | no | no | yes |
-| nodes | no | no | no |
-| create download button to download script for playcanvas based off node data | no| no| no|
+| nodes | no | no | yes |
+| create download button to download script for playcanvas based off node data | no| no| yes|
+| converter | no | no | yes
 ## what we need to do ##
 - create a server to host the editor
 - create a function to get what nodes and the data of the nodes being used, then output it to a json file or other data file
@@ -32,4 +36,4 @@ money would be nice, but i am doing this for fun. what you could do, is play our
 
   
 ### Developed by DevGuy-owner of Quantumgames Studios inc.
-base code from the playcanvas pcui node graph system.
+base code from the litegraph.js node graph system.
