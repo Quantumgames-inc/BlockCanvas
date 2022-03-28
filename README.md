@@ -3,7 +3,7 @@
 [![pages-build-deployment](https://github.com/Quantumgames-inc/flowcanvas/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Quantumgames-inc/flowcanvas/actions/workflows/pages/pages-build-deployment)
 
 
-[<a href="https://quantumgames-inc.github.io/flowcanvas/index.html">use the editor</a>](https://quantumgames-inc.github.io/flowcanvas/index.html)
+[<a href="https://quantumgames-inc.github.io/BlockCanvas/">use the editor</a>](https://quantumgames-inc.github.io/flowcanvas/index.html)
 ## what is BlockCanvas? ##
 flowcanvas is a visual scripting editor for playcanvas.com. it is made with javascript/node.js.
 ## how will i be able to use it? ##
