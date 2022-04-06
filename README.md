@@ -1,7 +1,7 @@
 # BlockCanvas-a playcanvas visual scripting editor
 [![CodeQL](https://github.com/Quantumgames-inc/flowcanvas-a-playcanvas-visual-scripting-editor/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Quantumgames-inc/flowcanvas-a-playcanvas-visual-scripting-editor/actions/workflows/codeql-analysis.yml)
 [![pages-build-deployment](https://github.com/Quantumgames-inc/flowcanvas/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Quantumgames-inc/flowcanvas/actions/workflows/pages/pages-build-deployment)
-
+## development is paused because i am working on season 5 of Left 2 Die! development will resume after season 5 is released!
 
 [<a href="https://quantumgames-inc.github.io/BlockCanvas/">use the editor</a>](https://quantumgames-inc.github.io/flowcanvas/index.html)
 ## what is BlockCanvas? ##
